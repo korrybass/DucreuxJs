@@ -5,5 +5,5 @@ This framework was created to help with normal frontend tasks such as validation
 
 Still in very experimental state will be streamlined and new features added soon.
 
-#Element equalizer
+###Element equalizer
 du.equalizer();
