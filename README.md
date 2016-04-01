@@ -7,3 +7,15 @@ Still in very experimental state will be streamlined and new features added soon
 
 ###Element equalizer
 du.equalizer();
+example html markup to come
+
+###Element validation
+du.validate("input_element_name");
+example html markup to come
+
+###Geolocation 
+du.geoLocate(callback_function);
+
+###VideoBox
+du.videoBox();
+example html markup to come
