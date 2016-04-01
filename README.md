@@ -5,6 +5,10 @@ This framework was created to help with normal frontend tasks such as validation
 
 Still in very experimental state will be streamlined and new features added soon.
 
+###Element Querying
+du.query();
+example html markup to come
+
 ###Element equalizer
 du.equalizer();
 example html markup to come
@@ -19,3 +23,4 @@ du.geoLocate(callback_function);
 ###VideoBox
 du.videoBox();
 example html markup to come
+
