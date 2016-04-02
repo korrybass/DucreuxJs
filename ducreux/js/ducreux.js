@@ -75,24 +75,13 @@
                     }
                 }
 
-
                 if (e.hasAttribute('required')) {
                     var nodes = e.parentNode.childNodes,
                         i = 0;
                     //console.log(x);
                     for (; i < nodes.length; i++) {
                         if (nodes[i].className) {
-                            if (e.name == 'vin') {
-                                if (!valid_vin(x)) {
-                                    //console.log('tesfdaa', valid_vin(x));
-                                    //attr name should be vin
-                                    nodes[i].style.display = "block";
-                                    return false;
-                                } else {
-                                    clearError();
-                                    return true;
-                                }
-                            }
+
                             switch (e.type || e.name) {
                                 case 'tel':
 
@@ -231,7 +220,6 @@
                     }
                 }
                 console.log('equalizer engaged');
-
             }
             equalizeDivs();
             window.onresize = function() { equalizeDivs() }
@@ -315,7 +303,7 @@
             }
             textbox.value = str
         },
-        geoLocate: function(callback) {
+        geoLocate: function(callback, error) {
             console.log(window.navigator);
             navigator.geolocation.getCurrentPosition(function() {
                 console.log('test')
@@ -327,8 +315,70 @@
                 }
                 );
             } else {
+                if (typeof error === "function") { }
+                error();
                 console.log("is not available");
             }
+        },
+        pubsub: function() {
+            (function(window, doc, undef) {
+                var topics = {},
+                    subUid = -1,
+                    pubsubz = {};
+
+                pubsubz.publish = function(topic, args) {
+
+                    if (!topics[topic]) {
+                        console.error('Event ' + topic + ' does not exist');
+                        return false;
+                    }
+                    setTimeout(function() {
+                        console.log(topics, topics[topic]);
+                        var subscribers = topics[topic],
+                            len = subscribers ? subscribers.length : 0;
+
+                        while (len--) {
+                            subscribers[len].func(topic, args);
+                        }
+                    }, 0);
+                    return true;
+                };
+
+                pubsubz.subscribe = function(topic, func) {
+
+                    if (!topics[topic]) {
+                        topics[topic] = [];
+                    }
+
+                    var token = (++subUid).toString();
+                    topics[topic].push({
+                        token: token,
+                        func: func
+                    });
+                    return token;
+                };
+
+                pubsubz.unsubscribe = function(token) {
+                    for (var m in topics) {
+                        if (topics[m]) {
+                            for (var i = 0, j = topics[m].length; i < j; i++) {
+                                if (topics[m][i].token === token) {
+                                    topics[m].splice(i, 1);
+                                    return token;
+                                }
+                            }
+                        }
+                    }
+                    return false;
+                };
+
+                getPubSubz = function() {
+                    return pubsubz;
+                };
+
+                window.pubsubz = getPubSubz();
+
+            } (window, window.document));
         }
     }
 
@@ -349,61 +399,3 @@
 //var video = document.querySelector('.vidIframe');
 
 
-(function(window, doc, undef) {
-    var topics = {},
-        subUid = -1,
-        pubsubz = {};
-
-    pubsubz.publish = function(topic, args) {
-
-        if (!topics[topic]) {
-            console.error('Event ' + topic + ' does not exist');
-            return false;
-        }
-        setTimeout(function() {
-            console.log(topics, topics[topic]);
-            var subscribers = topics[topic],
-                len = subscribers ? subscribers.length : 0;
-
-            while (len--) {
-                subscribers[len].func(topic, args);
-            }
-        }, 0);
-        return true;
-    };
-
-    pubsubz.subscribe = function(topic, func) {
-
-        if (!topics[topic]) {
-            topics[topic] = [];
-        }
-
-        var token = (++subUid).toString();
-        topics[topic].push({
-            token: token,
-            func: func
-        });
-        return token;
-    };
-
-    pubsubz.unsubscribe = function(token) {
-        for (var m in topics) {
-            if (topics[m]) {
-                for (var i = 0, j = topics[m].length; i < j; i++) {
-                    if (topics[m][i].token === token) {
-                        topics[m].splice(i, 1);
-                        return token;
-                    }
-                }
-            }
-        }
-        return false;
-    };
-
-    getPubSubz = function() {
-        return pubsubz;
-    };
-
-    window.pubsubz = getPubSubz();
-
-} (this, this.document));
