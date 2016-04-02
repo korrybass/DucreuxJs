@@ -385,17 +385,3 @@
     /////export to window
     window.du = ducreuxFns;
 } (window));
-
-
-
-
-
-
-
-
-
-
-
-//var video = document.querySelector('.vidIframe');
-
-
