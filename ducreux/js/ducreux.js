@@ -294,6 +294,8 @@
             }
         },
         mask: function mask(str, textbox, loc, delim) {
+            var test = this.query('[data-dumask]');
+            console.log(test);
             //Begins the function with a name mask, and sets 4 parameters, as mentioned above.
             var locs = loc.split(',');
             //Creates an array out of multiple numbers (to add each separator on its own).

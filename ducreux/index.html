@@ -9,10 +9,15 @@
 
 <body>
     <div id="site-wrapper">
-
+        <div class="header">
+               <div class="container">
+                    <h1 class="h1Banner">DucreuxJs</h1>
+            <h2 id="title">Just Du Stuff</h2>
+               </div>
+            </div>
         <div class="container">
-            <h1 class="h1Banner"> TestGound</h1>
-            <h2 id="title">Ducreux.js</h2>
+            
+            
             <div class="nav">
                 <ul>
                     <li><a href="#" class="toggle-nav btn btn-lg btn-success" id="big-sexy"> Toggle Nav</a></li>
@@ -24,23 +29,28 @@
                 <input type="text" name="fname" required>
                 <span class="error">enter valid value</span>
             </div>
-            <div>
-                <p>input fname</p>
-                <input type="text" name="fname" required>
-                <span class="error">enter valid value</span>
-            </div>
-            <div>
-                <p>input fname</p>
-                <input type="text" name="fname" required>
-                <span class="error">enter valid value</span>
-            </div>
+            <form data-dumask>
+                First name:
+                <br>
+                <div>
+                    <input type="text" name="firstname" required>
+                    <span class="error">enter valid value</span>
+                </div>
+                <br> Last name:
+                <br>
+                <div>
+                    <input type="text" name="lastname" required>
+                    <span class="error">enter valid value</span>
+                </div>
+            </form>
+
             <button id="validate">Validate</button>
 
             <div class="row" data-evendiv>
                 <h2>Equalizer for Even DIVS</h2>
                 <div class="moreinfo medium-4 columns">
                     <div class="moreinfo-in" data-evenchild>
-                        <span class="findout">Get Your Title Back</span>
+                        <span class="findout">Header Text </span>
                         <p>Lorem ipsum dolor sit amet, consulatu referrentur per an, et odio idque labores mel. Has porro equidem
                             vulputate no, unum eruditi fabellas duo ei. Id qui nibh clita, pri veri decore eruditi ex, an
                             vel sale graeci accusam. Nam dicta essent lucilius ei, est denique nominavi id. No qui verear
@@ -75,7 +85,6 @@
             </div>
             <div data-directiivetest></div>
         </div>
-
     </div>
     <script src="js/ducreux.js"></script>
     <script src="js/app.js"></script>

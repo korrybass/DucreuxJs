@@ -1,6 +1,10 @@
+html{
+    background-color: #CEC3AD;
+}
+
 h1, h2, h3, h4, h5, h6, p {
 	font-family: sans-serif;
-	color: #484848;
+	color: #D76A2F;
 }
 
 .h1Banner{
@@ -61,6 +65,14 @@ div{
 	position: relative;
 	opacity: .4;
 /*	border-top: solid white 1px;*/
+}
+.header{
+    padding: 60px 20px;
+    background-color: #D76A2F;
+    
+}
+.header h1, .header h2{
+    color: #F4E6C9 !important;
 }
 .child:hover{
 	opacity: .8;
@@ -152,7 +164,7 @@ input{
 #site-wrapper {
 position: relative;
 overflow: hidden;
-
+padding: 0;
 }
 
 #site-canvas {
@@ -195,7 +207,7 @@ overflow: hidden;
 }
 
 div[data-evenchild]{
-	background-color: #C0E05D;
+	background-color: #FFFBF2;
 	margin-bottom: 30px;
 }
 
