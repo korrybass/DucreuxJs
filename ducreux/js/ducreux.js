@@ -36,11 +36,10 @@
             el.className += className;
         });
     };
-    DuQuery.prototype.removeClass = function(clazz) {
+    DuQuery.prototype.removeClass = function(classes) {
         return this.forEach(function(el) {
             var cs = el.className.split(' '), i;
-
-            while ((i = cs.indexOf(clazz)) > -1) {
+            while ((i = cs.indexOf(classes)) > -1) {
                 cs = cs.slice(0, i).concat(cs.slice(++i));
             }
             el.className = cs.join(' ');
@@ -61,9 +60,18 @@
             return new DuQuery(els);
         },
         validate: function(elem) {
+            var elements = this.query(elem);
+            var formElements = [];
+            console.log(elements);
+            for(i=0;i < elements.length; i++){
+                console.log('loop ran', elements[i].nodeName);
+                if(elements[i].nodeName == "FORM"){
+                    formElements = elements[i].elements;
+                }
+            }
+            console.log(formElements);
             this.query(elem).forEach(function(e) {
                 var x = e.value;
-
                 function clearError() {
                     for (; i < nodes.length; i++) {
                         if (nodes[i].className) {
@@ -281,7 +289,7 @@
                 });
             }
         },
-        mask: function mask(str, textbox, loc, delim) {
+        mask: function (str, textbox, loc, delim) {
             var test = this.query('[data-dumask]');
             console.log(test);
             //Begins the function with a name mask, and sets 4 parameters, as mentioned above.
