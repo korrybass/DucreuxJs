@@ -4,4 +4,4 @@
 du.equalizer();
 //du.geoLocate();
 //du.mask();
-//du.directive('', 'data-directivtest', testDir);
+du.directive('', 'data-directivtest', testDir);
