@@ -4,4 +4,7 @@
 du.equalizer();
 //du.geoLocate();
 //du.mask();
-//du.directive('', 'data-directivtest', testDir);
+function testDir (){
+	console.log('ran the directive');
+}
+du.directive('test.html', 'data-directivetest', testDir);

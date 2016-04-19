@@ -11,6 +11,12 @@ form{
 	background-color: #eaeaea;
 	padding: 15px;
 }
+button{
+	    padding: 11px 25px;
+    background-color: #D76A2F;
+    border: none;
+    color: #FBE2B3 !important;
+}
 
 .h1Banner{
 font-size: 60px !important;
