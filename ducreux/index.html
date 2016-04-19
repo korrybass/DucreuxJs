@@ -28,21 +28,17 @@
 			
 			
             <form data-dumask data-formvalidate>
-                <p>First name:</p>
-                <br>
                 <div>
-                    <input type="text" name="firstname" required>
+                    <input placeholder="firstname" type="text" name="firstname" required>
                     <span class="error">enter valid value</span>
                 </div>
-                <p> Last name:</p>
-                <br>
                 <div>
-                    <input type="text" name="lastname" required>
+                    <input placeholder="lastname" type="text" name="lastname" required>
                     <span class="error">enter valid value</span>
                 </div>
+				<button type="button" id="validate" onclick="du.validate('[data-formvalidate]')">Validate</button>
             </form>
 
-            <button id="validate" onclick="du.validate('[data-formvalidate]')">Validate</button>
 
             <div class="row" data-evendiv>
                 <h2>Equalizer for Even DIVS</h2>

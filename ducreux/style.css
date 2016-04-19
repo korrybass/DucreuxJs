@@ -7,6 +7,11 @@ h1, h2, h3, h4, h5, h6, p {
 	color: #D76A2F;
 }
 
+form{
+	background-color: #eaeaea;
+	padding: 15px;
+}
+
 .h1Banner{
 font-size: 60px !important;
 	margin: 12px 0;

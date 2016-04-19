@@ -1,6 +1,6 @@
 
 //console.log(du);
-du.validate('input');
+//du.validate('input');
 du.equalizer();
 //du.geoLocate();
 //du.mask();
