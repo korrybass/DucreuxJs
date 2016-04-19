@@ -60,16 +60,16 @@
             return new DuQuery(els);
         },
         validate: function(elem) {
+			console.log("validate engaged");
+
             var elements = this.query(elem);
             var formElements = [];
-            console.log(elements);
             for(i=0;i < elements.length; i++){
-                console.log('loop ran', elements[i].nodeName);
+                //console.log('loop ran', elements[i].nodeName);
                 if(elements[i].nodeName == "FORM"){
                     formElements = elements[i].elements;
                 }
             }
-            console.log(formElements);
             this.query(elem).forEach(function(e) {
                 var x = e.value;
                 function clearError() {
@@ -200,6 +200,7 @@
             xhr.send(null);
         },
         equalizer: function() {
+			console.log('equalizer engaged');
             var evenDiv = document.querySelector('[data-evendiv]');
             function equalizeDivs() {
                 if (evenDiv) {
@@ -227,7 +228,6 @@
                         }
                     }
                 }
-                console.log('equalizer engaged');
             }
             equalizeDivs();
             window.onresize = function() { equalizeDivs() }
