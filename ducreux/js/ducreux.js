@@ -61,16 +61,18 @@
         },
         validate: function(elem) {
 			console.log("validate engaged");
-
+			
             var elements = this.query(elem);
             var formElements = [];
+			console.log(elements);
             for(i=0;i < elements.length; i++){
-                //console.log('loop ran', elements[i].nodeName);
+                console.log('loop ran', elements[i].nodeName);
                 if(elements[i].nodeName == "FORM"){
                     formElements = elements[i].elements;
+					console.log(formElements);
                 }
             }
-            this.query(elem).forEach(function(e) {
+            this.query(formElements).forEach(function(e) {
                 var x = e.value;
                 function clearError() {
                     for (; i < nodes.length; i++) {
@@ -239,38 +241,50 @@
                 video[i].addEventListener('click', play);
             }
             function play(e) {
-                var hasIframe;
-                var placeIframe;
-                for (i = 0; i < this.children.length; i++) {
-                    if (this.children[i].nodeName == "IFRAME") {
-                        hasIframe = true;
-                        placeIframe = this.children[i];
-                    }
-                }
-                e.preventDefault();
+				e.preventDefault();
+				currentElem = this;
                 var videoBox = document.createElement('DIV'),
                     videoContainer = document.createElement("DIV"),
                     videoHolder = document.createElement("DIV"),
                     exitScreen = document.createElement("DIV");
 
-                if (!hasIframe) {
-                    var video = document.createElement('VIDEO');
+					videoBox.className = 'videoBox-container';
 
-
-                    videoBox.className = 'videoBox-container';
-                } else {
-                    var video = placeIframe;
+                    var video = document.createElement("IFRAME");
+					video.href = this.href;
                     video.style.display = 'block';
-                    console.dir(video);
-                }
+                    console.log(this);
 
+					var videoType = (function(){
+						var type;
+						console.log(currentElem, currentElem.href.indexOf("youtube"));
+						if(currentElem.href.indexOf("youtube") != -1){
+							type = "youtube";
+						}else{
+							type = "video";
+						}
+						return type;
+					}());
+					console.log(videoType);
+					switch(videoType){
+						case "youtube":
+							var urlStart = video.href.slice(0, video.href.indexOf("/watch"));
+							var urlEnd = video.href.slice(video.href.indexOf("/watch"));
+							urlEnd = urlEnd.replace("watch?v=", "");
+							video.href = urlStart +"/embed" + urlEnd;
+							console.log(video.href);
+							break;
+						default: 
+							console.log("hit the defualt");
+							break;
+					}
+					
+				
+//
                 iframeId = Math.round(Math.random() * 9999999).toString();
-                video.src = this.href;
-                video.autoplay = true;
-                video.controls = true;
+                video.src = video.href;
                 videoHolder.className = 'videoHolder';
                 videoContainer.className = 'videoContainer';
-
                 exitScreen.className = "exitScreen";
 
                 //append to document

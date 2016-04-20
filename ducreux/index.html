@@ -30,6 +30,15 @@
                     <input placeholder="lastname" type="text" name="lastname" required>
                     <span class="error">enter valid value</span>
                 </div>
+				<div>
+					<input placeholder="password" type="password" name="psw" required>
+					<span class="error">enter valid value</span>
+				</div>
+				<div>
+					<input type="radio" name="gender" value="male" checked> radio<br>
+  					<input type="radio" name="gender" value="female"> radio2<br>
+  					<input type="radio" name="gender" value="other"> Other
+				</div>
 				<button type="button" id="validate" onclick="du.validate('[data-formvalidate]')">Validate</button>
             </form>
 
@@ -59,19 +68,15 @@
                     </div>
                 </div>
             </div>
-            <div class="section panel">
-                <a class="vidIframe" target="_blank" href="https://www.youtube.com/watch?v=Yv2oP1GpkDM" target="_blank">
-                    <!--						
-					<iframe width="560" height="315" src="https://www.youtube.com/embed/Rgln62lPl3E" frameborder="0" allowfullscreen></iframe>
-					-->
-                    <span class="fi-play">Watch the video</span>
-                </a>
-                <a class="vidIframe" target="_blank" href="https://www.youtube.com/watch?v=Yv2oP1GpkDM" target="_blank">
+            <div class="row section divspacer panel">
+                <a class="vidIframe"  href="https://www.youtube.com/watch?v=jDV5q37rGlg" >
                     <span class="fi-play">Watch the video</span>
                 </a>
             </div>
-			<div data-directivetest></div>
-        </div>
+			<div class="row divspacer">
+				<div data-directivetest></div>
+			</div>
+		</div>
     </div>
     <script src="js/ducreux.js"></script>
     <script src="js/app.js"></script>
