@@ -7,4 +7,4 @@ du.equalizer();
 function testDir (){
 	console.log('ran the directive');
 }
-du.directive('test.html', 'data-directivetest', testDir);
+//du.directive('test.html', 'data-directivetest', testDir);
