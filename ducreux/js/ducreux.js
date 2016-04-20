@@ -236,7 +236,6 @@
         },
         videoBox: function() {
             var video = document.querySelectorAll('.vidIframe');
-            //console.dir(video);
             for (i = 0; i < video.length; i++) {
                 video[i].addEventListener('click', play);
             }
@@ -253,11 +252,9 @@
                     var video = document.createElement("IFRAME");
 					video.href = this.href;
                     video.style.display = 'block';
-                    console.log(this);
 
 					var videoType = (function(){
 						var type;
-						console.log(currentElem, currentElem.href.indexOf("youtube"));
 						if(currentElem.href.indexOf("youtube") != -1){
 							type = "youtube";
 						}else{
@@ -265,22 +262,17 @@
 						}
 						return type;
 					}());
-					console.log(videoType);
 					switch(videoType){
 						case "youtube":
 							var urlStart = video.href.slice(0, video.href.indexOf("/watch"));
 							var urlEnd = video.href.slice(video.href.indexOf("/watch"));
 							urlEnd = urlEnd.replace("watch?v=", "");
 							video.href = urlStart +"/embed" + urlEnd;
-							console.log(video.href);
 							break;
 						default: 
-							console.log("hit the defualt");
 							break;
 					}
-					
 				
-//
                 iframeId = Math.round(Math.random() * 9999999).toString();
                 video.src = video.href;
                 videoHolder.className = 'videoHolder';
@@ -326,7 +318,6 @@
             textbox.value = str
         },
         geoLocate: function(callback, error) {
-            console.log(window.navigator);
             navigator.geolocation.getCurrentPosition(function() {
                 console.log('test')
             })

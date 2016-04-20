@@ -263,7 +263,7 @@ textarea{
 /*video holder*/
 
 .videoBox-container {
-	background: url(/Site/app/assets/images/Shared/fancybox_overlay.png);
+	background: url(overlay.png);
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -309,7 +309,7 @@ textarea{
 .exitScreen {
 	width: 45px;
 	height: 45px;
-	background: url('/Site/app/assets/images/Shared/fancybox_sprite.png') no-repeat;
+	background: url('fancybox_sprite.png') no-repeat;
 	position: absolute;
 	top: 2px;
 	right: 21px;
@@ -341,5 +341,13 @@ textarea{
     -o-transform: skewY(-2deg);
     transform: skewY(-4deg);
     -webkit-backface-visibility: hidden;
-    backface-visibility: initial;
+    backface-visibility: hidden;
+	-webkit-box-shadow: 17px 17px 16px -11px rgba(51, 40, 37,1);
+    -moz-box-shadow: 17px 17px 16px -11px rgb(51, 40, 37);
+    box-shadow: 17px 17px 16px -11px rgb(51, 40, 37);
+	
+    background: -webkit-linear-gradient(left top, #D76A2F, #DA5000); 
+    background: -o-linear-gradient(bottom right, #D76A2F, #DA5000); 
+    background: -moz-linear-gradient(bottom right, #D76A2F, #DA5000); 
+    background: linear-gradient(to bottom right, #D76A2F, #DA5000); 
 }
