@@ -7,7 +7,6 @@ Still in very experimental state will be streamlined and new features added soon
 
 ###Element Querying
 du.query(name_of_elem);
-example html markup to come
 
 ###Element equalizer
 du.equalizer();  
@@ -34,7 +33,33 @@ Example
 
 ###Form validation
 du.validate("input_element_name");
-
+Example  
+du.validate("[data-duvalidate]")
+```html
+<form data-duvalidate>
+	<div>
+		<input placeholder="firstname" type="text" name="firstname" required>
+		<span class="error">enter valid value</span>
+	</div>
+	<div>
+		<input placeholder="lastname" type="text" name="lastname" required>
+		<span class="error">enter valid value</span>
+	</div>
+	<div>
+		<input placeholder="password" type="password" name="psw" required>
+		<span class="error">enter valid value</span>
+	</div>
+	<div>
+		<div>
+			<input type="radio" required name="gender" value="male" > radio<br>
+			<span class="error">enter valid value</span>
+		</div>
+		<input type="radio" name="gender" value="female"> radio2<br>
+		<input type="radio" name="gender" value="other"> Other
+	</div>
+	<button type="button" id="validate" onclick="du.validate('[data-duvalidate]')">Validate</button>
+</form>
+```
 ###Geolocation 
 du.geoLocate(callback_function);
 
@@ -47,5 +72,4 @@ Example
 	<span class="fi-play">Watch the video</span>
 </a>
 ```
-example html markup to come
 
