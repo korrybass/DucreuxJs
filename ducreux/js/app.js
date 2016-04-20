@@ -1,11 +1,12 @@
 
 //console.log(du);
 //du.validate('input');
-du.equalizer();
-du.videoBox();
-//du.geoLocate();
+//du.equalizer();
+//du.videoBox();
+du.geoLocate(function(position){
+	console.log(position);
+});
 //du.mask();
-function testDir (){
-	console.log('ran the directive');
-}
+function testDir (){console.log('directive engaged')}
+
 du.directive('test.html', 'data-directivetest', testDir);

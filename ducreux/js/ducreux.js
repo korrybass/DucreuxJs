@@ -318,15 +318,10 @@
             textbox.value = str
         },
         geoLocate: function(callback, error) {
-            navigator.geolocation.getCurrentPosition(function() {
-                console.log('test')
-            })
             if ("geolocation" in navigator) {
                 navigator.geolocation.getCurrentPosition(function(position) {
-                    console.log(position);
-                    callback();
-                }
-                );
+                    callback(position);
+                });
             } else {
                 if (typeof error === "function") { }
                 error();

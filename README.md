@@ -8,9 +8,20 @@ Still in very experimental state will be streamlined and new features added soon
 ###Element Querying
 du.query(name_of_elem);
 
+###Custom Directives
+du.directive('path_to_file', 'name_of_directive_attribute', callback_fn;  
+function testDir (){console.log('directive engaged')}  
+du.directive('test.html', 'data-directivetest', testDir);  
+```html
+<div data-directivetest></div>
+```
+
 ###Element equalizer
+Example  
+First call this in your script
+```
 du.equalizer();  
-Example
+```
 ```html
 <div class="row " data-evendiv>
 	<h2>Equalizer for Even DIVS</h2>
@@ -34,7 +45,9 @@ Example
 ###Form validation
 du.validate("input_element_name");  
 Example  
+```
 du.validate("[data-duvalidate]")
+```
 ```html
 <form data-duvalidate>
 	<div>
@@ -59,12 +72,19 @@ du.validate("[data-duvalidate]")
 	</div>
 </form>
 ```
-###Geolocation 
-du.geoLocate(callback_function);
-
+###Geolocation
+du.geoLocate(callback_function);  
+Example  
+```
+du.geoLocate(function(position){
+	console.log(position);
+});
+```
 ###VideoBox
-Call this in your script somewhere  
+Call this in your script somewhere 
+```
 du.videoBox();  
+```
 Example 
 ```html
 <a class="vidIframe"  href="https://www.youtube.com/watch?v=jDV5q37rGlg" >
