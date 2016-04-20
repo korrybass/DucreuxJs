@@ -10,35 +10,42 @@ du.query(name_of_elem);
 example html markup to come
 
 ###Element equalizer
-du.equalizer();
-example html markup to come
-
-###Form validation
-du.validate("input_element_name");
+du.equalizer();  
 Example
 ```html
 <div class="row " data-evendiv>
-                <h2>Equalizer for Even DIVS</h2>
-                <div class="">
-                    <div class=" panel" data-evenchild>
-                        your text here
-                    </div>
-                </div>
-                <div class="">
-                    <div class="panel" data-evenchild>
-                    </div>
-                </div>
-                <div class="">
-                    <div class="panel" data-evenchild>
-                        your text here
-                    </div>
-                </div>
-            </div>
+	<h2>Equalizer for Even DIVS</h2>
+	<div class="">
+		<div class=" panel" data-evenchild>
+			your text here
+		</div>
+	</div>
+	<div class="">
+		<div class="panel" data-evenchild>
+		</div>
+	</div>
+	<div class="">
+		<div class="panel" data-evenchild>
+			your text here
+		</div>
+	</div>
+</div>
 ```
+
+###Form validation
+du.validate("input_element_name");
+
 ###Geolocation 
 du.geoLocate(callback_function);
 
 ###VideoBox
-du.videoBox();
+Call this in your script somewhere  
+du.videoBox();  
+Example 
+```html
+<a class="vidIframe"  href="https://www.youtube.com/watch?v=jDV5q37rGlg" >
+	<span class="fi-play">Watch the video</span>
+</a>
+```
 example html markup to come
 
