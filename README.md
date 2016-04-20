@@ -13,10 +13,28 @@ example html markup to come
 du.equalizer();
 example html markup to come
 
-###Element validation
+###Form validation
 du.validate("input_element_name");
-example html markup to come
-
+Example
+```html
+<div class="row " data-evendiv>
+                <h2>Equalizer for Even DIVS</h2>
+                <div class="">
+                    <div class=" panel" data-evenchild>
+                        your text here
+                    </div>
+                </div>
+                <div class="">
+                    <div class="panel" data-evenchild>
+                    </div>
+                </div>
+                <div class="">
+                    <div class="panel" data-evenchild>
+                        your text here
+                    </div>
+                </div>
+            </div>
+```
 ###Geolocation 
 du.geoLocate(callback_function);
 

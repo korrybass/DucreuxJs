@@ -21,7 +21,7 @@
                 <h2>Validation</h2>
             </div>
 			
-            <form data-dumask data-formvalidate>
+            <form data-duvalidate>
                 <div>
                     <input placeholder="firstname" type="text" name="firstname" required>
                     <span class="error">enter valid value</span>
@@ -35,18 +35,21 @@
 					<span class="error">enter valid value</span>
 				</div>
 				<div>
-					<input type="radio" name="gender" value="male" checked> radio<br>
+					<div>
+						<input type="radio" required name="gender" value="male" > radio<br>
+						<span class="error">enter valid value</span>
+					</div>
   					<input type="radio" name="gender" value="female"> radio2<br>
   					<input type="radio" name="gender" value="other"> Other
 				</div>
-				<button type="button" id="validate" onclick="du.validate('[data-formvalidate]')">Validate</button>
+				<button type="button" id="validate" onclick="du.validate('[data-duvalidate]')">Validate</button>
             </form>
 
             <div class="row " data-evendiv>
                 <h2>Equalizer for Even DIVS</h2>
-                <div class="moreinfo  medium-4 columns">
-                    <div class="moreinfo-in panel" data-evenchild>
-                        <span class="findout">Header Text </span>
+                <div class="">
+                    <div class="panel" data-evenchild>
+                        <span class="">Header Text </span>
                         <p>Lorem ipsum dolor sit amet, consulatu referrentur per an, et odio idque labores mel. Has porro equidem
                             vulputate no, unum eruditi fabellas duo ei. Id qui nibh clita, pri veri decore eruditi ex, an
                             vel sale graeci accusam. Nam dicta essent lucilius ei, est denique nominavi id. No qui verear
@@ -54,12 +57,12 @@
 						</p>
                     </div>
                 </div>
-                <div class="home-video medium-4 columns">
-                    <div class="homevid-in panel" data-evenchild>
+                <div class="">
+                    <div class="panel" data-evenchild>
                     </div>
                 </div>
-                <div class="feedback medium-4 columns">
-                    <div class="review panel" data-evenchild>
+                <div class="">
+                    <div class="panel" data-evenchild>
                         <h2>Title Block</h2>
                         <p>Lorem ipsum dolor sit amet, consulatu referrentur per an, et odio idque labores mel. Has porro equidem
                             vulputate no, unum eruditi fabellas duo ei. Id qui nibh clita, pri veri decore eruditi ex, an
