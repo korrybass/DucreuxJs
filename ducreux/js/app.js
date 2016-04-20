@@ -1,8 +1,7 @@
 
-//console.log(du);
-//du.validate('input');
-//du.equalizer();
-//du.videoBox();
+du.validate('input');
+du.equalizer();
+du.videoBox();
 du.geoLocate(function(position){
 	console.log(position);
 });
