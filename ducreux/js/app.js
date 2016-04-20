@@ -1,5 +1,4 @@
 
-du.validate('input');
 du.equalizer();
 du.videoBox();
 du.geoLocate(function(position){
