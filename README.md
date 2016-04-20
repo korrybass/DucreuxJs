@@ -9,9 +9,11 @@ Still in very experimental state will be streamlined and new features added soon
 du.query(name_of_elem);
 
 ###Custom Directives
-du.directive('path_to_file', 'name_of_directive_attribute', callback_fn;  
+du.directive('path_to_file', 'name_of_directive_attribute', callback_fn;
+```
 function testDir (){console.log('directive engaged')}  
 du.directive('test.html', 'data-directivetest', testDir);  
+```
 ```html
 <div data-directivetest></div>
 ```
@@ -22,6 +24,7 @@ First call this in your script
 ```
 du.equalizer();  
 ```
+Place this in your html markup
 ```html
 <div class="row " data-evendiv>
 	<h2>Equalizer for Even DIVS</h2>
