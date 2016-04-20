@@ -32,7 +32,7 @@ Example
 ```
 
 ###Form validation
-du.validate("input_element_name");
+du.validate("input_element_name");  
 Example  
 du.validate("[data-duvalidate]")
 ```html
@@ -57,7 +57,6 @@ du.validate("[data-duvalidate]")
 		<input type="radio" name="gender" value="female"> radio2<br>
 		<input type="radio" name="gender" value="other"> Other
 	</div>
-	<button type="button" id="validate" onclick="du.validate('[data-duvalidate]')">Validate</button>
 </form>
 ```
 ###Geolocation 
