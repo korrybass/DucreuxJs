@@ -10,22 +10,16 @@
 <body>
     <div id="site-wrapper">
         <div class="header">
-               <div class="container">
-                    <h1 class="h1Banner">DucreuxJs</h1>
-            <h2 id="title">Just Du Stuff</h2>
-               </div>
-            </div>
+        	<div class="container skew">
+                <h1 class="h1Banner">DucreuxJs</h1>
+            	<h2 id="title">Just Du Stuff</h2>
+           	</div>
+        </div>
         <div class="container">
-            
-            
-            <div class="nav">
-
-            </div>
+            <div class="nav"></div>
             <div>
                 <h2>Validation</h2>
             </div>
-			
-			
 			
             <form data-dumask data-formvalidate>
                 <div>
@@ -39,11 +33,10 @@
 				<button type="button" id="validate" onclick="du.validate('[data-formvalidate]')">Validate</button>
             </form>
 
-
-            <div class="row" data-evendiv>
+            <div class="row " data-evendiv>
                 <h2>Equalizer for Even DIVS</h2>
-                <div class="moreinfo medium-4 columns">
-                    <div class="moreinfo-in" data-evenchild>
+                <div class="moreinfo  medium-4 columns">
+                    <div class="moreinfo-in panel" data-evenchild>
                         <span class="findout">Header Text </span>
                         <p>Lorem ipsum dolor sit amet, consulatu referrentur per an, et odio idque labores mel. Has porro equidem
                             vulputate no, unum eruditi fabellas duo ei. Id qui nibh clita, pri veri decore eruditi ex, an
@@ -53,33 +46,31 @@
                     </div>
                 </div>
                 <div class="home-video medium-4 columns">
-                    <div class="homevid-in" data-evenchild>
-
-
+                    <div class="homevid-in panel" data-evenchild>
                     </div>
                 </div>
                 <div class="feedback medium-4 columns">
-                    <div class="review" data-evenchild>
+                    <div class="review panel" data-evenchild>
                         <h2>Title Block</h2>
                         <p>Lorem ipsum dolor sit amet, consulatu referrentur per an, et odio idque labores mel. Has porro equidem
                             vulputate no, unum eruditi fabellas duo ei. Id qui nibh clita, pri veri decore eruditi ex, an
-                            vel sale graeci accusam. Nam dicta essent lucilius ei, est denique nominavi id. .</p>
+                            vel sale graeci accusam. Nam dicta essent lucilius ei, est denique nominavi id. 
+						</p>
                     </div>
                 </div>
             </div>
-            <div class="section">
+            <div class="section panel">
                 <a class="vidIframe" target="_blank" href="https://www.youtube.com/watch?v=Yv2oP1GpkDM" target="_blank">
-                    <!--						<iframe width="560" height="315" src="https://www.youtube.com/embed/Rgln62lPl3E" frameborder="0" allowfullscreen></iframe>-->
-
+                    <!--						
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/Rgln62lPl3E" frameborder="0" allowfullscreen></iframe>
+					-->
                     <span class="fi-play">Watch the video</span>
                 </a>
                 <a class="vidIframe" target="_blank" href="https://www.youtube.com/watch?v=Yv2oP1GpkDM" target="_blank">
-
                     <span class="fi-play">Watch the video</span>
                 </a>
             </div>
-					<div data-directivetest></div>
-
+			<div data-directivetest></div>
         </div>
     </div>
     <script src="js/ducreux.js"></script>

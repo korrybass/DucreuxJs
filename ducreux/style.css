@@ -44,6 +44,11 @@ body{
 	min-height: 900px
 }
 
+.panel{
+	padding: 15px;
+	background-color: #FFFBF2;
+}
+
 ul{
 	list-style: none !important;
 }
@@ -60,9 +65,7 @@ ul{
 /*	margin: 30px 0;*/
 }
 
-div{
-	padding: 15px;
-}
+
 
 #parent{
 	height: 100%;
@@ -79,7 +82,7 @@ div{
 }
 .header{
     padding: 60px 20px;
-    background-color: #D76A2F;
+	position: relative;
     
 }
 .header h1, .header h2{
@@ -99,9 +102,10 @@ div{
 	padding: 10px;
 }
 input{
+		height: 50px;
 	width: 100%;
 	box-sizing:border-box;
-	padding: 5px 0;
+	padding: 5px 10px;
 }
 
 .section{
@@ -306,4 +310,23 @@ textarea{
 }
 .vidIframe iframe {
 /*	display: none;*/
+}
+
+.header .skew:before {
+    content: '';
+    position: absolute;
+    left: 0;
+    top: -53px;
+    overflow: visible;
+    width: 100%;
+    height: 261px;
+    background: #D76A2F;
+    z-index: -1;
+    -webkit-transform: skewY(-2deg);
+    -moz-transform: skewY(-2deg);
+    -ms-transform: skewY(-2deg);
+    -o-transform: skewY(-2deg);
+    transform: skewY(-4deg);
+    -webkit-backface-visibility: hidden;
+    backface-visibility: initial;
 }
