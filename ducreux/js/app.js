@@ -1,9 +1,9 @@
 
 du.equalizer();
 du.videoBox();
-du.geoLocate(function(position){
-	console.log(position);
-});
+// du.geoLocate(function(position){
+// 	console.log(position);
+// });
 //du.mask();
 function testDir (){console.log('directive engaged')}
 
