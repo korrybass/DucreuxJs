@@ -6,7 +6,6 @@ Will be adding input masking for the future.
 
 Still in very experimental state will be streamlined and new features added soon.
 
-
 ###Element Querying
 du.query(name_of_elem);
 
