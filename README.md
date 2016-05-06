@@ -46,6 +46,7 @@ Place this in your html markup
 </div>
 ```
 
+
 ###Form validation
 du.validate("input_element_name");  
 Example  
