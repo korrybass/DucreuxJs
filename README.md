@@ -18,7 +18,6 @@ du.directive('test.html', 'data-directivetest', testDir);
 ```html
 <div data-directivetest></div>
 ```
-
 ###Element equalizer
 Example  
 First call this in your script
